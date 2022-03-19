@@ -1,0 +1,10 @@
+{
+  "name": "velocite/velo3m",
+  "description": "Exploitation des données vélos en OpenData sur la Métropole de Montpellier (Montpellier 3m)",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "Velo3m\\": "src/"
+    }
+  }
+}
