@@ -69,7 +69,7 @@
             wp_mkdir_p($upDir);
         }
         $file = $upDir.'/arceaux.json';
-        if(!file_exists($file)){
+        if(!file_exists($file) || (time() - filemtime($file) > 60*60*24)){
             $data = [];
             $obj = json_decode(@file_get_contents('https://data.montpellier3m.fr/sites/default/files/ressources/OSM_Metropole_parking_velo.json'));
             if(is_object($obj) && isset($obj->features) && is_array($obj->features) && count($obj->features) > 0){
